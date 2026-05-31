@@ -13,3 +13,4 @@ return [
     'charset'  => 'utf8mb4',
     'options'  => []               // گزینه‌های اضافی PDO
 ];
+
