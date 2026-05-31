@@ -12,7 +12,7 @@ $config = ConnectionConfig::fromConfigFile(__DIR__ . '/../config/database.php');
 $connection = new Connection($config);
 
 try {
-    $users = $connection->select('users', ['status' => 'active']);
+    $users = $connection->select('users', []); // بدون شرط
     $newId = $connection->insert('users', ['name' => 'Ali', 'email' => 'ali@example.com']);
     $affected = $connection->update('users', ['status' => 'inactive'], ['id' => 2]);
     $connection->delete('users', ['id' => 5]);
