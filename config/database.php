@@ -5,7 +5,7 @@ return [
     'port'     => 3306,
     'database' => 'mydb',
     'username' => 'root',
-    'password' => 'secret',
+    'password' => '',
     'charset'  => 'utf8mb4',
     'options'  => [],
 ];
