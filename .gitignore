@@ -1,0 +1,18 @@
+# اطلاعات حساس - هرگز کامیت نشود
+config/database.php
+.env
+
+# فایل‌های سیستم‌عامل
+.DS_Store
+Thumbs.db
+
+# فایل‌های IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# فایل‌های موقت
+*.log
+*.tmp
+*.cache
