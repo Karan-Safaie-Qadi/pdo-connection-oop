@@ -1,11 +1,15 @@
 <?php
+/**
+ * فایل نمونه پیکربندی پایگاه داده
+ * آن را به database.php کپی کرده و اطلاعات خود را وارد کنید.
+ */
 return [
-    'driver'   => 'mysql',
+    'driver'   => 'mysql',         // mysql, pgsql, sqlite
     'host'     => '127.0.0.1',
     'port'     => 3306,
-    'database' => 'mydb',
-    'username' => 'root',
-    'password' => 'secret',
+    'database' => 'your_database',
+    'username' => 'your_username',
+    'password' => 'your_password',
     'charset'  => 'utf8mb4',
-    'options'  => [],
+    'options'  => []               // گزینه‌های اضافی PDO
 ];
