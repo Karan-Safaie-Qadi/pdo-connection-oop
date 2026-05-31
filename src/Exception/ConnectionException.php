@@ -1,4 +1,4 @@
 <?php
-namespace YourVendor\SecureConnection;
+namespace YourVendor\SecureConnection\Exception;
 
 class ConnectionException extends \RuntimeException {}
