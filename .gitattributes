@@ -1,2 +1,28 @@
-# Auto detect text files and perform LF normalization
+# تنظیمات عمومی
 * text=auto
+
+# فایل‌های کد با خط‌شکن LF
+*.php text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.xml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.neon text eol=lf
+*.ini text eol=lf
+*.env text eol=lf
+
+# فایل‌های باینری
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.woff2 binary
+
+# حذف از آرشیوهای انتشار (اگر روزی release بسازید)
+/tests export-ignore
+/examples export-ignore
+/config export-ignore
+.gitattributes export-ignore
+.gitignore export-ignore
+README.md export-ignore
