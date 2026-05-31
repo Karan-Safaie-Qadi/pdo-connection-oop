@@ -157,3 +157,4 @@ class Connection
         $this->pdo = null;
     }
 }
+
