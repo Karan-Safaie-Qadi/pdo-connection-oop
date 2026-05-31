@@ -4,7 +4,7 @@ Autoloader::register(__DIR__ . '/../src');
 
 use YourVendor\SecureConnection\Connection;
 use YourVendor\SecureConnection\ConnectionConfig;
-use YourVendor\SecureConnection\ConnectionException;
+use YourVendor\SecureConnection\Exception\ConnectionException;
 
 // بارگذاری پیکربندی از فایل (در صورت وجود)
 $config = ConnectionConfig::fromConfigFile(__DIR__ . '/../config/database.php');
