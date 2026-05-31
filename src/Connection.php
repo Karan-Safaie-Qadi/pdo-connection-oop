@@ -9,7 +9,7 @@ class Connection
 {
     private ?PDO $pdo = null;
     private int $retryAttempts = 3;
-    private int $retryDelayMicroseconds = 500000; // 0.5 ثانیه
+    private int $retryDelayMicroseconds = 500000;
 
     public function __construct(
         private readonly ConnectionConfig $config
@@ -53,12 +53,8 @@ class Connection
             PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
             PDO::ATTR_EMULATE_PREPARES   => false,
-            // برای MySQL، تنظیم charset در DSN کافیست. اما در برخی نسخه‌ها دستور زیر ایمن‌تر است:
-            // PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES {$this->config->charset}"
         ];
     }
-
-    // ---------- متدهای کاربردی (Query Builder ساده) ----------
 
     public function select(string $table, array $where = [], string $extra = ''): array
     {
@@ -119,7 +115,6 @@ class Connection
         return $this->execute($sql, $params);
     }
 
-    // متدهای پایه
     public function query(string $sql, array $params = []): \PDOStatement
     {
         $stmt = $this->connect()->prepare($sql);
@@ -137,7 +132,6 @@ class Connection
         return $this->connect()->lastInsertId($name);
     }
 
-    // تراکنش‌ها
     public function beginTransaction(): bool
     {
         return $this->connect()->beginTransaction();
