@@ -3,6 +3,7 @@ namespace YourVendor\SecureConnection;
 
 use PDO;
 use PDOException;
+use YourVendor\SecureConnection\Exception\ConnectionException;
 
 class Connection
 {
